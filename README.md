@@ -1,6 +1,6 @@
 # go-mutexasserts
 
-A small library that allows to check if Go mutexes are locked. It can be used to verify invariants/assumptions about [un]locking mutexes in a given codebase.
+A small library that allows to check if Go mutexes are locked. It can be used to verify invariants/assumptions about [un]locking mutexes within certain functions.
 
 Also, read the ["How to check if a mutex is locked in Go"](https://blog.trailofbits.com/2020/06/09/how-to-check-if-a-mutex-is-locked-in-go/)  blog post on that topic.
 
