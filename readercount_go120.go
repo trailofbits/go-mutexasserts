@@ -14,5 +14,6 @@ import (
 func readerCount(rw *sync.RWMutex) int64 {
 	// Look up the address of the readerCount field and use it to create a pointer to an atomic.Int32,
 	// then load the value to return.
-	return int64((*atomic.Int32)(reflect.ValueOf(rw).Elem().FieldByName("readerCount").Addr().UnsafePointer()).Load())
+	rc := (*atomic.Int32)(reflect.ValueOf(rw).Elem().FieldByName("readerCount").Addr().UnsafePointer())
+	return int64(rc.Load())
 }
