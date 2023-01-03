@@ -19,5 +19,5 @@ func RWMutexLocked(rw *sync.RWMutex) bool {
 }
 
 func RWMutexRLocked(rw *sync.RWMutex) bool {
-	return reflect.ValueOf(rw).Elem().FieldByName("readerCount").Int() > 0
+	return readerCount(rw) > 0
 }
